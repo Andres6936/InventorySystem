@@ -3,4 +3,6 @@ PROJECT(SystemInventory)
 
 SET(CMAKE_CXX_STANDARD 11)
 
-ADD_EXECUTABLE(SystemInventory Main.cpp)
+ADD_EXECUTABLE(SystemInventory Main.cpp
+        Source/Item.cpp
+        Source/Shield.cpp)
