@@ -8,35 +8,36 @@ int main( )
 {
     Item *array[4];
 
-    Shield childA = Shield( 2, 4 );
+    Shield childA = Shield( );
+
     array[ 0 ] = &childA;
 
     array[ 0 ]->print( );
 
-    array[ 1 ] = new Shield( 6, 8 );
+    array[ 1 ] = new Shield( );
 
     array[ 1 ]->print( );
 
     delete array[ 1 ];
-    array[ 1 ] = new Shield( 10, 12 );
+    array[ 1 ] = new Shield( "Shield Wood", 1000, Shield::SHIELD, 5 );
 
     array[ 1 ]->print( );
 
     delete array[ 1 ];
-    array[ 1 ] = new Shield( 14, 16 );
+    array[ 1 ] = new Shield( "Shield Plate", 1200, Shield::SHIELD, 8 );
 
     array[ 1 ]->print( );
 
     delete array[ 1 ];
-    array[ 1 ] = new Shield( 18, 20 );
+    array[ 1 ] = new Shield( "Shield Steel", 1600, Shield::SHIELD, 12 );
 
     array[ 1 ]->print( );
 
-    array[ 2 ] = new Shield( 22, 24 );
+    array[ 2 ] = new Shield( "Shield Gold", 2400, Shield::SHIELD, 18 );
 
     array[ 2 ]->print( );
 
-    array[ 3 ] = new Shield( 26, 28 );
+    array[ 3 ] = new Shield( "Shield Diamont", 3600, Shield::SHIELD, 36 );
 
     array[ 3 ]->print( );
 

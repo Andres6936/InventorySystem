@@ -3,29 +3,31 @@
 
 #include "Item.hpp"
 
+using namespace std;
+
 class Shield : public Item
 {
 
+public:
+
+    static const short SHIELD = 99;
+
 private:
 
-    int thing;
+    short defense;
 
 public:
 
-    Shield( )
-    {
-        thing = 0;
-    }
+    Shield( );
 
-    Shield( int nTest, int nThing ) : Item( nTest )
-    {
-        thing = nThing;
-    }
+    Shield( string nName, short nPrice, short nType, short nDefense );
 
-    void print( ) override
-    {
-        std::cout << thing << std::endl;
-    }
+    void print( ) override;
+
+    short getDefense( ) const;
+
+    void setDefense( short nDefense );
+
 };
 
 #endif //SYSTEMINVENTORY_SHIELD_HPP

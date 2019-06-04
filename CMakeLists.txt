@@ -5,4 +5,5 @@ SET(CMAKE_CXX_STANDARD 11)
 
 ADD_EXECUTABLE(SystemInventory Main.cpp
         Source/Item.cpp
-        Source/Shield.cpp)
+        Source/Shield.cpp
+        Source/Inventory.cpp)

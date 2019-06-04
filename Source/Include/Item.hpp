@@ -3,29 +3,41 @@
 
 #include <iostream>
 
+using namespace std;
+
 class Item
 {
 
+public:
+
+    static const short NONE = 0;
+
 private:
 
-    int test;
+    string name;
+    short price;
+    short type;
 
 public:
 
-    Item( )
-    {
-        test = 0;
-    }
+    Item( );
 
-    explicit Item( int nTest )
-    {
-        test = nTest;
-    }
+    Item( string nName, short nPrice, short nType );
 
-    virtual void print( )
-    {
-        std::cout << test << std::endl;
-    }
+    virtual void print( );
+
+    const string &getName( ) const;
+
+    void setName( const string &nName );
+
+    short getPrice( ) const;
+
+    void setPrice( short nPrice );
+
+    short getType( ) const;
+
+    void setType( short nType );
+
 };
 
 #endif //SYSTEMINVENTORY_ITEM_H
