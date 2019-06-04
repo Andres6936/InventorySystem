@@ -20,7 +20,7 @@ public:
         test = nTest;
     }
 
-    void print( )
+    virtual void print( )
     {
         std::cout << test << std::endl;
     }
@@ -46,7 +46,7 @@ public:
         thing = nThing;
     }
 
-    void print( )
+    void print( ) override
     {
         std::cout << thing << std::endl;
     }
@@ -61,40 +61,33 @@ int main( )
     array[ 0 ] = &childA;
 
     array[ 0 ]->print( );
-    static_cast<Child *> (array[ 0 ])->print( );
 
     array[ 1 ] = new Child( 6, 8 );
 
     array[ 1 ]->print( );
-    static_cast<Child *> (array[ 1 ])->print( );
 
     delete array[ 1 ];
     array[ 1 ] = new Child( 10, 12 );
 
     array[ 1 ]->print( );
-    static_cast<Child *> (array[ 1 ])->print( );
 
     delete array[ 1 ];
     array[ 1 ] = new Child( 14, 16 );
 
     array[ 1 ]->print( );
-    static_cast<Child *> (array[ 1 ])->print( );
 
     delete array[ 1 ];
     array[ 1 ] = new Child( 18, 20 );
 
     array[ 1 ]->print( );
-    static_cast<Child *> (array[ 1 ])->print( );
 
     array[ 2 ] = new Child( 22, 24 );
 
     array[ 2 ]->print( );
-    static_cast<Child *> (array[ 2 ])->print( );
 
     array[ 3 ] = new Child( 26, 28 );
 
     array[ 3 ]->print( );
-    static_cast<Child *> (array[ 3 ])->print( );
 
     delete array[ 1 ];
     delete array[ 2 ];
