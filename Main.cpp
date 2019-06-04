@@ -15,7 +15,7 @@ public:
         test = 0;
     }
 
-    Parent( int nTest )
+    explicit Parent( int nTest )
     {
         test = nTest;
     }
