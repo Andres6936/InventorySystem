@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 
+#include "Source/Include/Inventory.hpp"
 #include "Source/Include/Item.hpp"
 #include "Source/Include/Shield.hpp"
 

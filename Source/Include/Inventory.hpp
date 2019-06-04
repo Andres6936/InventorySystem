@@ -8,7 +8,7 @@ class Inventory
 
 public:
 
-    static const short MAX_ITEM_INVENTORY = 6;
+    static const short MAX_ITEM_INVENTORY = 4;
 
 private:
 
@@ -23,6 +23,8 @@ private:
 public:
 
     Inventory( );
+
+    virtual ~Inventory( );
 
     bool saveItem( Item &nItem );
 
