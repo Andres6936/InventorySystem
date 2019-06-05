@@ -2,6 +2,7 @@
 #define SYSTEMINVENTORY_INVENTORY_HPP
 
 #include "Item.hpp"
+#include "Shield.hpp"
 
 class Inventory
 {
@@ -26,7 +27,11 @@ public:
 
     virtual ~Inventory( );
 
-    bool saveItem( Item &nItem );
+    void showInventory( );
+
+    bool saveItem( Shield *nItem );
+
+    Item *getItemInIndex( short index );
 
 };
 
