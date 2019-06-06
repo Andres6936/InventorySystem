@@ -3,9 +3,8 @@
 
 enum EItemType
 {
-    /*
-     * Any object of this type must be treated as a null object.
-     */
+    // Any object of this type must
+    // be treated as a null object.
             NONE = 0,
 
     SHIELD
