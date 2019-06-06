@@ -8,10 +8,6 @@ using namespace std;
 class Shield : public Item
 {
 
-public:
-
-    static const short SHIELD = 99;
-
 private:
 
     short defense;
@@ -20,9 +16,9 @@ public:
 
     Shield( );
 
-    Shield( string nName, short nPrice, short nType, short nDefense );
+    Shield( string nName, short nPrice, EItemType nType, short nDefense );
 
-    void print( ) override;
+    void toString( ) override;
 
     short getDefense( ) const;
 

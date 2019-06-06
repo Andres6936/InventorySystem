@@ -3,28 +3,44 @@
 
 #include <iostream>
 
+#include "EItemType.hpp"
+
 using namespace std;
 
 class Item
 {
 
-public:
-
-    static const short NONE = 0;
-
 private:
 
+    /*
+     * Item name
+     *
+     * Condition: name != null
+     */
     string name;
+
+    /*
+     * Item price
+     *
+     * Condition: price >= 0
+     */
     short price;
-    short type;
+
+    /*
+     * Item type
+     */
+    EItemType type;
 
 public:
 
+    /*
+     * Default Construct
+     */
     Item( );
 
-    Item( string nName, short nPrice, short nType );
+    Item( string nName, short nPrice, EItemType nType );
 
-    virtual void print( );
+    virtual void toString( );
 
     const string &getName( ) const;
 
@@ -34,9 +50,9 @@ public:
 
     void setPrice( short nPrice );
 
-    short getType( ) const;
+    EItemType getType( ) const;
 
-    void setType( short nType );
+    void setType( EItemType nEtype );
 
 };
 

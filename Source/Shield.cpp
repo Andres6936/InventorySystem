@@ -4,18 +4,18 @@ Shield::Shield( )
 {
     setName( "None" );
     setPrice( 0 );
-    setType( Item::NONE );
+    setType( EItemType::NONE );
     defense = 0;
 }
 
-Shield::Shield( string nName, short nPrice, short nType, short nDefense ) : Item( nName, nPrice, nType )
+Shield::Shield( string nName, short nPrice, EItemType nType, short nDefense ) : Item( nName, nPrice, nType )
 {
     defense = nDefense;
 }
 
-void Shield::print( )
+void Shield::toString( )
 {
-    Item::print( );
+    Item::toString( );
 
     cout << "Defense:" << defense << endl;
     cout << endl;

@@ -8,17 +8,17 @@ Item::Item( )
 {
     name = "None";
     price = 0;
-    type = NONE;
+    type = EItemType::NONE;
 }
 
-Item::Item( string nName, short nPrice, short nType )
+Item::Item( string nName, short nPrice, EItemType nType )
 {
     name = nName;
     price = nPrice;
     type = nType;
 }
 
-void Item::print( )
+void Item::toString( )
 {
     cout << "Name:" << name << endl;
     cout << "Price:" << price << endl;
@@ -45,12 +45,12 @@ void Item::setPrice( short nPrice )
     price = nPrice;
 }
 
-short Item::getType( ) const
+EItemType Item::getType( ) const
 {
     return type;
 }
 
-void Item::setType( short nType )
+void Item::setType( EItemType nEtype )
 {
-    type = nType;
+    type = nEtype;
 }
