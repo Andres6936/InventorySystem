@@ -1,3 +1,3 @@
 <p align="center">
-    <img src="/Documentation/InventorySistem.png" alt="Graphics"/>
+    <img src="./Documentation/InventorySystem.png" alt="Graphics"/>
 </p>
