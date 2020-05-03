@@ -18,9 +18,15 @@ public:
 
     Shield( string nName, short nPrice, ItemType nType, short nDefense );
 
+    // Override
+
     void toString( ) override;
 
+    // Getters
+
     short getDefense( ) const;
+
+    // Setters
 
     void setDefense( short nDefense );
 
