@@ -29,7 +29,7 @@ private:
     /*
      * Item type
      */
-    ItemType type = ItemType::NONE;
+    const ItemType type = ItemType::NONE;
 
 public:
 
@@ -59,8 +59,6 @@ public:
     void setName( const string &nName );
 
     void setPrice( unsigned short nPrice );
-
-    void setType( ItemType nEtype );
 
 };
 

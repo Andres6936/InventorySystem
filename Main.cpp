@@ -11,10 +11,10 @@ int main( )
 {
     Inventory inventory;
 
-    inventory.saveItem( new Shield( "Shield A", 100, ItemType::SHIELD, 2 ));
-    inventory.saveItem( new Shield( "Shield B", 200, ItemType::SHIELD, 4 ));
-    inventory.saveItem( new Shield( "Shield C", 300, ItemType::SHIELD, 5 ));
-    inventory.saveItem( new Shield( "Shield D", 400, ItemType::SHIELD, 7 ));
+    inventory.saveItem( new Shield( "Shield A", 100, 2 ));
+    inventory.saveItem( new Shield( "Shield B", 200, 4 ));
+    inventory.saveItem( new Shield( "Shield C", 300, 5 ));
+    inventory.saveItem( new Shield( "Shield D", 400, 7 ));
 
     /*
      * The pointer stored in position 2 of the array points to a Shield type

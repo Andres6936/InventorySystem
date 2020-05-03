@@ -4,11 +4,10 @@ Shield::Shield( )
 {
     setName( "None" );
     setPrice( 0 );
-    setType( ItemType::NONE );
     defense = 0;
 }
 
-Shield::Shield( string nName, short nPrice, ItemType nType, short nDefense ) : Item( nName, nPrice, nType )
+Shield::Shield( string nName, short nPrice, short nDefense ) : Item( nName, nPrice, ItemType::SHIELD )
 {
     defense = nDefense;
 }

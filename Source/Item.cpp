@@ -8,14 +8,12 @@ Item::Item( )
 {
     name = "None";
     price = 0;
-    type = ItemType::NONE;
 }
 
-Item::Item( const string& nName, short nPrice, ItemType nType )
+Item::Item( const string& nName, short nPrice, ItemType nType ) : type(nType)
 {
     name = nName;
     price = nPrice;
-    type = nType;
 }
 
 void Item::toString( )
@@ -66,7 +64,3 @@ void Item::setPrice( unsigned short nPrice )
     price = nPrice;
 }
 
-void Item::setType( ItemType nEtype )
-{
-    type = nEtype;
-}
