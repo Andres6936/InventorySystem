@@ -2,8 +2,6 @@
 
 Shield::Shield( )
 {
-    setName( "None" );
-    setPrice( 0 );
     defense = 0;
 }
 

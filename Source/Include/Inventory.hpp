@@ -4,6 +4,8 @@
 #include "Item.hpp"
 #include "Shield.hpp"
 
+#include <vector>
+
 class Inventory
 {
 
@@ -16,26 +18,15 @@ public:
 
 private:
 
-    Item *inventory[MAX_ITEM_INVENTORY];
-
-    /*
-     * Return index of none item, it is (EItemType::NONE)
-     * If the function cannot find a none item, return -1
-     */
-    short findIndexOfNoneItem( );
+    vector<Item*> inventory;
 
 public:
-
-    /*
-     * Default Construct
-     */
-    Inventory( );
 
     virtual ~Inventory( );
 
     void showInventory( );
 
-    bool saveItem( Shield *nItem );
+    bool saveItem( Item *nItem );
 
     /*
      * The goal of {inventory} is to store pointers that point to Item objects and also

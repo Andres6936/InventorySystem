@@ -5,6 +5,7 @@ ADD_EXECUTABLE(SystemInventory
         Main.cpp
         Source/Item.cpp
         Source/Shield.cpp
+        Source/Blade.cpp
         Source/Inventory.cpp)
 
 SET_TARGET_PROPERTIES(SystemInventory PROPERTIES CXX_STANDARD 17)

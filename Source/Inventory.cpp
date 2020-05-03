@@ -1,14 +1,6 @@
 #include "Include/Inventory.hpp"
 #include "Include/Shield.hpp"
 
-Inventory::Inventory( )
-{
-    for ( short i = 0; i < MAX_ITEM_INVENTORY; i++ )
-    {
-        inventory[ i ] = new Item( );
-    }
-}
-
 Inventory::~Inventory( )
 {
     for ( short i = 0; i < MAX_ITEM_INVENTORY; i++ )
@@ -22,37 +14,9 @@ void Inventory::showInventory( )
 
 }
 
-short Inventory::findIndexOfNoneItem( )
+bool Inventory::saveItem( Item *nItem )
 {
-    for ( short i = 0; i < MAX_ITEM_INVENTORY; i++ )
-    {
-        // If the item is type none
-        if (inventory[ i ]->getType( ) == ItemType::NONE )
-        {
-            // Return the index of item in array
-            return i;
-        }
-    }
-
-    return -1;
-}
-
-bool Inventory::saveItem( Shield *nItem )
-{
-    short index = findIndexOfNoneItem( );
-
-    if ( index == -1 )
-    {
-        return false;
-    }
-    else
-    {
-        // Delete the old Item
-        delete inventory[ index ];
-        // Store the new Item
-        inventory[ index ] = nItem;
-        return true;
-    }
+    inventory.push_back(nItem);
 }
 
 Item *Inventory::getItemInIndex( short index )
