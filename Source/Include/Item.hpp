@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-#include "EItemType.hpp"
+#include "ItemType.hpp"
 
 using namespace std;
 
@@ -29,7 +29,7 @@ private:
     /*
      * Item type
      */
-    EItemType type;
+    ItemType type = ItemType::NONE;
 
 public:
 
@@ -38,7 +38,7 @@ public:
      */
     Item( );
 
-    Item( const string& nName, short nPrice, EItemType nType );
+    Item( const string& nName, short nPrice, ItemType nType );
 
     // Virtual Functions
 
@@ -50,7 +50,9 @@ public:
 
 	unsigned short getPrice( ) const;
 
-	EItemType getType( ) const;
+	ItemType getType( ) const;
+
+	string getStringOfType() const;
 
     // Setters
 
@@ -58,7 +60,7 @@ public:
 
     void setPrice( unsigned short nPrice );
 
-    void setType( EItemType nEtype );
+    void setType( ItemType nEtype );
 
 };
 

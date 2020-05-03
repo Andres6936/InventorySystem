@@ -27,7 +27,7 @@ short Inventory::findIndexOfNoneItem( )
     for ( short i = 0; i < MAX_ITEM_INVENTORY; i++ )
     {
         // If the item is type none
-        if ( inventory[ i ]->getType( ) == EItemType::NONE )
+        if (inventory[ i ]->getType( ) == ItemType::NONE )
         {
             // Return the index of item in array
             return i;

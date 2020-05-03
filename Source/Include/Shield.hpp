@@ -16,7 +16,7 @@ public:
 
     Shield( );
 
-    Shield( string nName, short nPrice, EItemType nType, short nDefense );
+    Shield( string nName, short nPrice, ItemType nType, short nDefense );
 
     void toString( ) override;
 

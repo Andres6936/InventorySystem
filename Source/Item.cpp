@@ -8,10 +8,10 @@ Item::Item( )
 {
     name = "None";
     price = 0;
-    type = EItemType::NONE;
+    type = ItemType::NONE;
 }
 
-Item::Item( const string& nName, short nPrice, EItemType nType )
+Item::Item( const string& nName, short nPrice, ItemType nType )
 {
     name = nName;
     price = nPrice;
@@ -22,22 +22,51 @@ void Item::toString( )
 {
     cout << "Name:" << name << "\n";
     cout << "Price:" << price << "\n";
-    cout << "Type:" << type << "\n";
+    cout << "Type:" << getStringOfType() << "\n";
 }
+
+// Getters
 
 const string &Item::getName( ) const
 {
     return name;
 }
 
+unsigned short Item::getPrice( ) const
+{
+	return price;
+}
+
+ItemType Item::getType( ) const
+{
+	return type;
+}
+
+string Item::getStringOfType() const
+{
+	switch (type)
+	{
+
+	case ItemType::NONE:
+		return "None";
+	case ItemType::SHIELD:
+		return "Shield";
+	case ItemType::BLADE:
+		return "Blade";
+	case ItemType::SABLE:
+		return "Sable";
+	}
+
+	// For avoid the warnings
+	// of compiler
+	return string("Never");
+}
+
+// Setters
+
 void Item::setName( const string &nName )
 {
     name = nName;
-}
-
-unsigned short Item::getPrice( ) const
-{
-    return price;
 }
 
 void Item::setPrice( unsigned short nPrice )
@@ -45,12 +74,7 @@ void Item::setPrice( unsigned short nPrice )
     price = nPrice;
 }
 
-EItemType Item::getType( ) const
-{
-    return type;
-}
-
-void Item::setType( EItemType nEtype )
+void Item::setType( ItemType nEtype )
 {
     type = nEtype;
 }
