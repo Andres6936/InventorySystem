@@ -11,7 +11,7 @@ Item::Item( )
     type = EItemType::NONE;
 }
 
-Item::Item( string nName, short nPrice, EItemType nType )
+Item::Item( const string& nName, short nPrice, EItemType nType )
 {
     name = nName;
     price = nPrice;
@@ -20,9 +20,9 @@ Item::Item( string nName, short nPrice, EItemType nType )
 
 void Item::toString( )
 {
-    cout << "Name:" << name << endl;
-    cout << "Price:" << price << endl;
-    cout << "Type:" << type << endl;
+    cout << "Name:" << name << "\n";
+    cout << "Price:" << price << "\n";
+    cout << "Type:" << type << "\n";
 }
 
 const string &Item::getName( ) const
@@ -35,12 +35,12 @@ void Item::setName( const string &nName )
     name = nName;
 }
 
-short Item::getPrice( ) const
+unsigned short Item::getPrice( ) const
 {
     return price;
 }
 
-void Item::setPrice( short nPrice )
+void Item::setPrice( unsigned short nPrice )
 {
     price = nPrice;
 }

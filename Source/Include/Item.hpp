@@ -15,7 +15,7 @@ private:
     /*
      * Item name
      *
-     * Condition: name != null
+     * Condition: name != empty()
      */
     string name;
 
@@ -24,7 +24,7 @@ private:
      *
      * Condition: price >= 0
      */
-    short price;
+    unsigned short price;
 
     /*
      * Item type
@@ -38,19 +38,25 @@ public:
      */
     Item( );
 
-    Item( string nName, short nPrice, EItemType nType );
+    Item( const string& nName, short nPrice, EItemType nType );
+
+    // Virtual Functions
 
     virtual void toString( );
 
+    // Getters
+
     const string &getName( ) const;
+
+	unsigned short getPrice( ) const;
+
+	EItemType getType( ) const;
+
+    // Setters
 
     void setName( const string &nName );
 
-    short getPrice( ) const;
-
-    void setPrice( short nPrice );
-
-    EItemType getType( ) const;
+    void setPrice( unsigned short nPrice );
 
     void setType( EItemType nEtype );
 
