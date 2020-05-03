@@ -46,20 +46,12 @@ string Item::getStringOfType() const
 {
 	switch (type)
 	{
-
-	case ItemType::NONE:
-		return "None";
-	case ItemType::SHIELD:
-		return "Shield";
-	case ItemType::BLADE:
-		return "Blade";
-	case ItemType::SABLE:
-		return "Sable";
+	case ItemType::NONE: return "None";
+	case ItemType::SHIELD: return "Shield";
+	case ItemType::BLADE: return "Blade";
+	case ItemType::SABLE: return "Sable";
+	default: return "Default";
 	}
-
-	// For avoid the warnings
-	// of compiler
-	return string("Never");
 }
 
 // Setters
